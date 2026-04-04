@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for discretion */
+.decoy-landing {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.safe-app {
+  background: #0f0f1e;
+  min-height: 100vh;
+  color: white;
+}
+
+/* Animation for loading spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}

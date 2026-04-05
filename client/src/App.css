@@ -1,47 +1,26 @@
-/* Fade in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.animate-fade-in {
-  animation: fadeIn 0.3s ease-out;
-}
-
-/* Spin animation for loading */
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+/* Custom curve utilities */
+@layer utilities {
+  .rounded-4xl {
+    border-radius: 2rem;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
   }
 }
 
-.animate-spin {
-  animation: spin 1s linear infinite;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-/* Pulse animation */
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-.animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-/* Smooth transitions */
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+/* Selection color */
+::selection {
+  background-color: #FEE2E2;
+  color: #DC2626;
 }
